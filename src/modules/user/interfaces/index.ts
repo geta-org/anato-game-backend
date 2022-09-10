@@ -1,1 +1,1 @@
-export * from './errors.interface';
+export { GetUserPipe } from './getUser.interface';

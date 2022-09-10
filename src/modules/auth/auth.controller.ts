@@ -17,4 +17,14 @@ export class AuthController {
   async register(@Body() body: RegisterPipe) {
     return this.authService.register(body);
   }
+
+  @Post('forgot_password')
+  async forgotPassword() {
+    return 'Forgot Password';
+  }
+
+  @Post('reset_password')
+  async resetPassword() {
+    return 'Reset Password';
+  }
 }

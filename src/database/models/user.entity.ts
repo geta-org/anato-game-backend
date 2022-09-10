@@ -2,8 +2,8 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('users')
 export class User {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
+  @PrimaryGeneratedColumn('increment')
+  id: number;
 
   @Column({ type: 'varchar', length: 100 })
   name: string;
@@ -13,4 +13,12 @@ export class User {
 
   @Column({ type: 'char', length: 96 })
   password: string;
+
+  // For testing
+  // constructor(data?: Partial<User>) {
+  //   this.id = data.id;
+  //   this.name = data.name;
+  //   this.email = data.email;
+  //   this.password = data.password;
+  // }
 }
